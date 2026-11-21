@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<title>TabPivot privacy</title>
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    color-scheme: light dark;
+    --color-page: Canvas;
+    --color-text: CanvasText;
+    --color-link: LinkText;
+    --color-focus: CanvasText;
+    --font-body: system-ui, sans-serif;
+    --font-size-body: 1rem;
+    --font-size-title: 1.75rem;
+    --font-size-heading: 1.25rem;
+    --line-height-body: 1.6;
+    --line-height-heading: 1.3;
+    --measure: 40rem;
+    --space-page: 1.25rem;
+    --space-block: 1rem;
+    --space-section: 2rem;
+    --space-list: 1.5rem;
+    --focus-width: 0.1875rem;
+    --focus-offset: 0.125rem;
+  }
+  body {
+    margin: 0;
+    padding: var(--space-page);
+    background: var(--color-page);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+  }
+  main {
+    max-width: var(--measure);
+    margin-inline: auto;
+  }
+  h1 {
+    font-size: var(--font-size-title);
+    line-height: var(--line-height-heading);
+    margin-block: var(--space-block);
+  }
+  h2 {
+    font-size: var(--font-size-heading);
+    line-height: var(--line-height-heading);
+    margin-block: var(--space-section) var(--space-block);
+  }
+  p, ul, ol {
+    margin-block: var(--space-block);
+  }
+  ul, ol {
+    padding-inline-start: var(--space-list);
+  }
+  a {
+    color: var(--color-link);
+    overflow-wrap: anywhere;
+  }
+  a:focus-visible {
+    outline: var(--focus-width) solid var(--color-focus);
+    outline-offset: var(--focus-offset);
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>TabPivot privacy</h1>
+<p>Last updated: <time datetime="2026-11-21">21 November 2026</time></p>
+<p>TabPivot is a browser extension for finding and switching tabs with the keyboard. There are two versions: the public version, and a beta for a small group of testers.</p>
+
+<h2>What TabPivot stores, and where</h2>
+<p>Everything TabPivot keeps stays in your browser's own storage. Nothing is kept anywhere else, apart from what Polar keeps if you buy Pro (see below).</p>
+<ul>
+<li>Your settings.</li>
+<li>A list of your recent tabs: the title and web address of each, and when and how often you used it. Without Pro, the list is kept only while the browser is open and is cleared when the browser closes. With Pro, it is kept when you restart the browser. If Pro turns off, the list saved while you had Pro stays in your browser until you turn Pro on again or remove TabPivot. In the beta, all Pro features are on.</li>
+<li>Your Pro license key, whether it is valid, when it was last checked, the activation ID Polar gave your browser, and the key's expiry date if it has one.</li>
+<li>A log of the last 100 errors, to help fix problems. Tab titles and web addresses are taken out of it.</li>
+<li>In the beta only, daily counts of use, such as how many times you opened the search box. They cover the last 30 days and hold no titles or web addresses.</li>
+</ul>
+<p>Tabs in private windows are never saved. If you allow TabPivot in private windows, it remembers those tabs only in memory while the browser is open.</p>
+<p>TabPivot reads only the tab titles, web addresses and icons your browser already has and, in Firefox, your theme colours.</p>
+<p>Removing TabPivot from your browser deletes everything it stored.</p>
+
+<h2>What TabPivot sends</h2>
+<p>The beta makes no network requests at all.</p>
+<p>The public version makes one network request, the license check, and only if you enter a Pro key. Nothing else is ever sent.</p>
+<p>The license check goes to Polar, the payment provider that sells TabPivot Pro, and asks whether your key is valid. It sends your license key, TabPivot's organization ID (so Polar knows the key is for TabPivot), an instance name such as "Firefox on macOS" (so you can tell your browsers apart) and, once your key is activated, the activation ID Polar gave your browser.</p>
+<p>The license check runs when you enter your key, when you press Check now in settings, and when you deactivate your key in this browser. It also runs without you doing anything, whenever TabPivot starts or wakes up in your browser and the last check is more than 7 days old or was never made. That comes to about once a week at most, or sooner if your computer's clock was changed.</p>
+<p>Like any web request, the license check also shows Polar your internet address.</p>
+<p>You buy Pro on Polar's website. Polar keeps a record of your purchase and of the activations of your key, with their instance names.</p>
+<p>Your daily counts and TabPivot's debug info leave your computer only if you copy them yourself and send them to someone.</p>
+
+<h2>What TabPivot will never do</h2>
+<p>These promises are permanent, even if TabPivot is no longer maintained. TabPivot will:</p>
+<ol>
+<li>Never track people or send usage data anywhere.</li>
+<li>Never show ads.</li>
+<li>Never read the content of web pages. Only tab titles, web addresses and the icons the browser already has.</li>
+<li>Never run a server that holds user data.</li>
+<li>Never become a subscription.</li>
+<li>Never sell or hand over TabPivot, its store listings, or its users. If its maker stops working on it, it stays as it is or is taken down.</li>
+</ol>
+
+<h2>Contact</h2>
+<p>Email privacy questions to <a href="mailto:tab-pivot@proton.me">tab-pivot@proton.me</a>.</p>
+</main>
+</body>
+</html>
